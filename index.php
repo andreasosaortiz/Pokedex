@@ -18,14 +18,13 @@
             <input type="text" id="username" name="username" placeholder="Usuario" required>
             <input type="password" id="password" name="password" placeholder="Contraseña" required>
             <a href="login.php" class="log">Loguearse></a>
-           
         </form>
     </div>
     </header>
     <main>
         <h2>Buscar Pokémon</h2>
-        <form id="search-form">
-            <input class="busquedap" type="text" id="search-input" name="search" placeholder="Nombre, Tipo o Número del Pokemon">
+        <form id="search-form" method="POST" action="buscar.php">
+            <input class="busquedap" type="text" id="search" name="search" placeholder="Nombre, Tipo o Número del Pokemon">
             <button type="submit">Buscar al Pokemon</button>
         </form>
        
@@ -41,19 +40,19 @@
             </thead>
             <tbody>
                 <!-- Ejemplo de fila 1 -->
-               
-                    <td><img src="imagen1.png" alt="Pokemon 1"></td>
+               <tr name="Charizard" id="Charizard">
+                    <td><img src="Pokemones/Charizard.png" alt="Pokemon 1"></td>
                     <td>Fuego</td>
-                    <td>#001</td>
+                    <td>#2</td>
                     <td>Charizard</td>
                     <td class="description"><a href="infopokemon.php">Ver más</a></td>
                 </tr>
                 
                 <!-- Ejemplo de fila 2 -->
                 <tr>
-                    <td><img src="imagen2.png" alt="Pokemon 2"></td>
+                    <td><img src="Pokemones/Squirtle.png" alt="Pokemon 2"></td>
                     <td>Agua</td>
-                    <td>#007</td>
+                    <td>#3</td>
                     <td>Squirtle</td>
                     <td class="description"><a href="infopokemon.php">Ver más</a></td>
                 </tr>
