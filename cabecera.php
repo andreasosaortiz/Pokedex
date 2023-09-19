@@ -9,7 +9,7 @@
 <body>
     
 <header>
-        <img class="logo" src="tu_logo.png" alt="Logo">
+<img class="logo" src="Pokemones/dex.png" alt="Logo">
         <h1>Pokédex</h1>
     
     
