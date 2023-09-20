@@ -14,7 +14,7 @@
     </header>
     <main>
         <h2>Buscar Pokémon</h2>
-        <form id="search-form">
+        <form id="search-form" actio>
             <input class="busquedap" type="text" id="search-input" name="search" placeholder="Nombre, Tipo o Número del Pokemon">
             <button type="submit">Buscar al Pokemon</button>
         </form>
