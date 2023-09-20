@@ -1,0 +1,13 @@
+.usuario-ctn{
+    display: flex;
+    align-items: center;
+}
+.usuario-ctn form{
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+#logout{
+    border: 1px solid #ccc;
+    padding: 5px;
+}
