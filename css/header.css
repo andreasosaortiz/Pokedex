@@ -11,3 +11,13 @@
     border: 1px solid #ccc;
     padding: 5px;
 }
+#login_form form{
+    margin: 0;
+}
+
+#boton_login{
+    padding: 5px;
+    border: 1px solid black;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
