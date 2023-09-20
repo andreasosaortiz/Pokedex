@@ -53,6 +53,7 @@ if ($result->num_rows > 0) {
                     ?>
                 </p>
                 <p class="pokemon-description"><?php echo $descripcion; ?></p>
+                <a class="button" href="index.php">Volver</a>
             </div>
         </div>
     </main>

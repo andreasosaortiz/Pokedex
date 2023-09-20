@@ -159,3 +159,40 @@ tr:hover {
     margin: 10px;
 }
 
+/* modificar.php */
+
+.title{
+    margin-top: 50px;
+}
+
+.container{
+    margin-top: 5%;
+}
+
+.imagen{
+    width: 100px;
+    margin: 20px;
+}
+
+label{
+    color: #f44336;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.input{
+    margin: 5px;
+    border-radius: 5px;
+    border-color: #d32f2f;
+}
+
+.button{
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 20px; 
+}
+

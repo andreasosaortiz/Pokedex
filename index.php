@@ -1,4 +1,5 @@
-<?php require_once('conexion.php'); ?>
+<?php require_once('conexion.php');?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,10 +16,10 @@
         <img class="logo" src="Pokemones/dex.png" alt="Logo">
         <h1>Pokédex</h1>
     <div id="login-form">
-        <form>
+        <form action="verificacionlogear.php" method="post">
             <input class="input" type="text" id="username" name="username" placeholder="Usuario" required>
             <input class="input" type="password" id="password" name="password" placeholder="Contraseña" required>
-            <a href="login.php" class="log">Loguearse</a>
+            <input class="log" type="submit" id="submit" value="Logearse">
         </form>
     </div>
     </header>
@@ -38,6 +39,11 @@
                     <th>Número</th>
                     <th>Nombre</th>
                     <th>Detalle</th>
+                    <?php
+                    if (isset($_SESSION)){
+                        echo "<th>Acciones</th>";
+                    };
+                    ?>
                 </tr>
             </thead>
             <tbody>
