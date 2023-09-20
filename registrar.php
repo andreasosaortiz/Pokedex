@@ -54,15 +54,9 @@ mysqli_close($conexion);
 <body>
 
 <header>
-    <img class="logo" src="Pokemones/dex.png" alt="Logo">
-    <h1>Pokédex</h1>
-    <div id="login-form">
-        <form action="verificacionlogear.php" method="post">
-            <input class="input" type="text" id="username" name="username" placeholder="Usuario" required>
-            <input class="input" type="password" id="password" name="password" placeholder="Contraseña" required>
-            <input class="log" type="submit" id="submit" value="Logearse">
-        </form>
-    </div>
+    <?php
+    include_once ("cabecera.php");
+    ?>
 </header>
 <main>
     <form method="post" action="registrar.php" id="formulario-registro">
