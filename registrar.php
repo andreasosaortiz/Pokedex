@@ -23,9 +23,6 @@ if (isset($_POST["nombre"]) and isset($_POST["contraseña"])) {
             mysqli_stmt_bind_param($stmtInsertar, "ss", $nombreNuevoUsuario, $contrasenaHash);
 
             if (mysqli_stmt_execute($stmtInsertar)) {
-                session_start();
-                $_SESSION["usuario"] = $nombreNuevoUsuario;
-                $_SESSION["logeado"] = true;
 
                 mysqli_stmt_close($stmtInsertar);
                 mysqli_close($conexion);
@@ -69,14 +66,16 @@ mysqli_close($conexion);
 </header>
 <main>
     <form method="post" action="registrar.php" id="formulario-registro">
-        <label>Nombre usuario: </label>
-        <input type="text" name="nombre" placeholder="Nombre...">
+        <div class="label-input">
+        <label>Nombre de usuario: </label>
+        <input type="text" name="nombre" placeholder="Nombre..." class="input-form">
+        </div>
+        <div class="label-input">
         <label>Contraseña:</label>
-        <input  type="password" name="contraseña" placeholder="Contraseña...">
-        <input type="submit" value="Enviar">
+        <input  type="password" name="contraseña" placeholder="Contraseña..." class="input-form">
+        </div>
+        <input type="submit" value="Enviar" class="btn-enviar">
     </form>
-
-
 </main>
 
 </body>

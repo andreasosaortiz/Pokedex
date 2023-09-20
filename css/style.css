@@ -158,4 +158,30 @@ tr:hover {
     height: 30px;
     margin: 10px;
 }
+#formulario-registro {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.label-input {
+    margin-bottom: 0.5rem;
+}
+
+.input-form {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn-enviar{
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 480px) {
+    #formulario-registro {
+        max-width: 90%;
+    }
+}
 
