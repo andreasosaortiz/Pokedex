@@ -1,4 +1,5 @@
-<?php require_once('conexion.php'); ?>
+<?php require_once('conexion.php');?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +38,11 @@
                     <th>Número</th>
                     <th>Nombre</th>
                     <th>Detalle</th>
+                    <?php
+                    if (isset($_SESSION)){
+                        echo "<th>Acciones</th>";
+                    };
+                    ?>
                 </tr>
             </thead>
             <tbody>
