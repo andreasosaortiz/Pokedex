@@ -8,20 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="icon" href="Pokemones/dex.png" type="image/x-icon">
 </head>
 <body>
     
-<header>
-        <img class="logo" src="Pokemones/dex.png" alt="Logo">
-        <h1>Pokédex</h1>
-    <div id="login-form">
-        <form action="verificacionlogear.php" method="post">
-            <input class="input" type="text" id="username" name="username" placeholder="Usuario" required>
-            <input class="input" type="password" id="password" name="password" placeholder="Contraseña" required>
-            <input class="log" type="submit" id="submit" value="Logearse">
-        </form>
-    </div>
+    <header>
+    <?php
+    include_once ("cabecera.php");
+    ?>
     </header>
     <main>
         
