@@ -48,7 +48,11 @@
             </tbody>
         </table>
     </main>
-    <button type="button" ><a href="crearPokemon.php">Nuevo Pokemon</a></button>
+    <?php
+    if(isset($_SESSION["logeado"])){
+        echo '<button type="button"> <a href="crearPokemon.php"> Nuevo Pokemon</a> </button>';
+    }
+    ?>
 </body>
 
 
