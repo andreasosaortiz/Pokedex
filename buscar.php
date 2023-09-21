@@ -2,18 +2,37 @@
 include_once('conexion.php');
 
 $termino_busqueda = $_POST["search"];
-
 $termino_busqueda = $conexion->real_escape_string($termino_busqueda);
 
 $sql = "SELECT p.*, t.nombre AS nombre_tipo
         FROM pokemon AS p
         INNER JOIN tipos AS t ON p.tipo_id = t.id
         WHERE p.nombre LIKE '%$termino_busqueda%'";
-        
+
 $resultado = $conexion->query($sql);
-include('cabecera.php');
 ?>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokédex</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/header.css">
+    </head>
+<header>
+    <?php
+    include_once ("cabecera.php");
+    ?>
+</header>
+    <body>
+
 <main>
+        <h2>Buscar Pokémon</h2>
+        <form id="search-form" method="POST" action="buscar.php">
+            <input class="busquedap" type="text" id="search" name="search" placeholder="Nombre, Tipo o Número del Pokemon">
+            <button type="submit">Buscar al Pokemon</button>
+        </form>
 <table>
 <thead>
     <tr>
@@ -25,7 +44,7 @@ include('cabecera.php');
     </tr>
 </thead>
 <tbody>
-<?php    
+<?php
 if ($resultado->num_rows > 0) {
     while ($row = $resultado->fetch_assoc()) {
         include 'tipoPokemon.php';
@@ -49,5 +68,6 @@ if ($resultado->num_rows > 0) {
 <?php
 
 $conexion->close();
-
 ?>
+    </body>
+</html>

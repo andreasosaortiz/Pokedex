@@ -1,5 +1,5 @@
 <?php
-include_once("conexionbasededatos.php");
+include_once("conexion.php");
 
 if (isset($_POST["nombre"]) and isset($_POST["contraseña"])) {
     $nombreNuevoUsuario = $_POST["nombre"];
@@ -20,27 +20,62 @@ if (isset($_POST["nombre"]) and isset($_POST["contraseña"])) {
         $stmtInsertar = mysqli_prepare($conexion, $queryInsertarUsuario);
 
         if ($stmtInsertar) {
-            mysqli_stmt_bind_param($stmtInsertar, "si", $nombreNuevoUsuario, $contrasenaHash);
+            mysqli_stmt_bind_param($stmtInsertar, "ss", $nombreNuevoUsuario, $contrasenaHash);
 
             if (mysqli_stmt_execute($stmtInsertar)) {
-                session_start();
-                $_SESSION["usuario"] = $nombreNuevoUsuario;
-                $_SESSION["logeado"] = true;
 
                 mysqli_stmt_close($stmtInsertar);
                 mysqli_close($conexion);
 
-                //header("Location: ??? ");
-                //exit();
+                header("Location: index.php");
+
             } else {
                 echo "Error: " . mysqli_error($conexion);
             }
         }
-
         mysqli_stmt_close($stmtInsertar);
 
     }
 }
 mysqli_close($conexion);
-
 ?>
+
+<?php require_once('conexion.php'); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="icon" href="Pokemones/dex.png" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <?php
+    include_once ("cabecera.php");
+    ?>
+</header>
+<main>
+    <form method="post" action="registrar.php" id="formulario-registro">
+        <div class="label-input">
+        <label>Nombre de usuario: </label>
+        <input type="text" name="nombre" placeholder="Nombre..." class="input-form">
+        </div>
+        <div class="label-input">
+        <label>Contraseña:</label>
+        <input  type="password" name="contraseña" placeholder="Contraseña..." class="input-form">
+        </div>
+        <input type="submit" value="Enviar" class="btn-enviar">
+    </form>
+</main>
+
+</body>
+
+
+
+</html>
+

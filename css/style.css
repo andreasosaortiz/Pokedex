@@ -10,13 +10,13 @@ body {
 header {
     background-color: #f44336;
     color: white;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
@@ -28,7 +28,7 @@ a{
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 36px; /* Aumentamos el tamaño del título a 36px */
     margin: 0;
     flex-grow: 1;
 }
@@ -78,7 +78,7 @@ table {
     width: 90%;
     border-collapse: collapse;
     margin: 70px 45px;
-   
+   background: url(/Pokemones/fondopokemon.png);
 }
 
 th, td {
@@ -157,5 +157,68 @@ tr:hover {
     width: 30px;
     height: 30px;
     margin: 10px;
+}
+#formulario-registro {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.label-input {
+    margin-bottom: 0.5rem;
+}
+
+.input-form {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn-enviar{
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 480px) {
+    #formulario-registro {
+        max-width: 90%;
+    }
+}
+
+/* modificar.php */
+
+.title{
+    margin-top: 50px;
+}
+
+.container{
+    margin-top: 5%;
+}
+
+.imagen{
+    width: 100px;
+    margin: 20px;
+}
+
+label{
+    color: #f44336;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.input{
+    margin: 5px;
+    border-radius: 5px;
+    border-color: #d32f2f;
+}
+
+.button{
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 20px; 
 }
 
