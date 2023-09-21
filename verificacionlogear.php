@@ -2,6 +2,7 @@
 require_once("conexion.php");
 session_start();
 
+
 if (isset($_POST["username"]) and isset($_POST["password"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -20,6 +21,7 @@ if (isset($_POST["username"]) and isset($_POST["password"])) {
             $row = mysqli_fetch_assoc($resultado);
             $hashContrasenaAlmacenada = $row["contraseña"];
             if (password_verify($password, $hashContrasenaAlmacenada)){
+                
                 $_SESSION['usuario'] = $username;
                 $_SESSION['logeado'] = true;
 
