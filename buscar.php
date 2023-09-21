@@ -1,6 +1,8 @@
 <?php
 include_once('conexion.php');
 
+if($_SERVER["REQUEST_METHOD"] = "POST"){
+
 $termino_busqueda = $_POST["search"];
 $termino_busqueda = $conexion->real_escape_string($termino_busqueda);
 
@@ -10,6 +12,8 @@ $sql = "SELECT p.*, t.nombre AS nombre_tipo
         WHERE p.nombre LIKE '%$termino_busqueda%'";
 
 $resultado = $conexion->query($sql);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -45,6 +49,8 @@ $resultado = $conexion->query($sql);
 </thead>
 <tbody>
 <?php
+if($_SERVER["REQUEST_METHOD"] = "POST"){
+
 if ($resultado->num_rows > 0) {
     while ($row = $resultado->fetch_assoc()) {
         include 'tipoPokemon.php';
@@ -61,6 +67,7 @@ if ($resultado->num_rows > 0) {
 } else {
     echo "Pokemon no encontrado.";
     include_once('datos.php');
+}
 }?>
      </tbody>
     </table>
