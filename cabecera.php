@@ -1,6 +1,8 @@
 
 <img class="logo" src="Pokemones/dex.png" alt="Logo">
-    <h1>Pokédex</h1>
+<a href="/" class="logo">
+				<img src="Pokemones/Pokédex_logo.png" alt="Logo Pokedex" />
+			</a>
     <?php
     session_start();
     if(isset($_SESSION["logeado"]) && $_SESSION["logeado"]){

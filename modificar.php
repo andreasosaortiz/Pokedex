@@ -25,8 +25,17 @@ if (isset($_GET['id'])) {
 <head>
     <title>Modificar Pokémon</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modificar.css">
 </head>
+<header>
+
+<img class="logo" src="Pokemones/dex.png" alt="Logo">
+        <a href="/">
+				<img src="Pokemones/Pokédex_logo.png" alt="Logo Pokedex" width="150px"/>
+			</a>
+    </header>
 <body>
+    <main>
 <h1 class="title">Modificar Pokémon</h1>
     <div class="container">
     <img class="imagen" src="Pokemones/<?php echo "$imagen" ?>" alt="">
@@ -50,5 +59,6 @@ if (isset($_GET['id'])) {
     </form>
     </div>
     <a class="button" href="index.php">Volver</a>
+    </main>
 </body>
 </html>

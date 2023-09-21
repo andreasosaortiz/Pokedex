@@ -35,14 +35,16 @@
                     <th>Nombre</th>
                     <th>Detalle</th>
                     <?php
-                    if (isset($_SESSION)){
+                    if(isset($_SESSION["logeado"])){
                         echo "<th>Acciones</th>";
                     };
                     ?>
                 </tr>
             </thead>
             <tbody>
-                <?php include_once('datos.php'); ?>
+                <?php
+                include_once('datos.php');
+                ?>
             </tbody>
         </table>
     </main>
