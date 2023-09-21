@@ -1,6 +1,6 @@
 <?php
 
-$host = "localhost:3307";     
+$host = "localhost:33067";
 $usuario = "root";
 $password = "";
 $nombre_bd = "pokedex"; 
