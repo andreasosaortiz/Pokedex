@@ -46,7 +46,7 @@
             </tbody>
         </table>
     </main>
-
+    <button type="button" ><a href="crearPokemon.php">Nuevo Pokemon</a></button>
 </body>
 
 
