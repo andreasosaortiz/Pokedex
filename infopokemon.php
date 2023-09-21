@@ -31,7 +31,9 @@ if ($result->num_rows > 0) {
 <body>
     <header>
     <img class="logo" src="Pokemones/dex.png" alt="Logo">
-        <h1>Pokédex</h1>
+    <a href="/">
+				<img src="Pokemones/Pokédex_logo.png" alt="Logo Pokedex" width="150px"/>
+			</a>
     </header>
     <main>
         <div class="pokemon-card">

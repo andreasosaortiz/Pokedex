@@ -10,7 +10,9 @@
         
 <header>
         <img class="logo" src="tu_logo.png" alt="Logo">
-        <h1>Pokédex</h1>
+        <a href="/" class="logo">
+				<img src="Pokemones/Pokédex_logo.png" alt="Logo Pokedex" />
+			</a>
     </header>
     <main>
         <h2>Buscar Pokémon</h2>
