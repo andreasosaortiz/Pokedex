@@ -54,12 +54,17 @@ mysqli_close($conexion);
 </head>
 <body>
 
+
 <header>
-    <?php
-    include_once ("cabecera.php");
-    ?>
-</header>
+
+<img class="logo" src="Pokemones/dex.png" alt="Logo">
+        <a href="/">
+				<img src="Pokemones/Pokédex_logo.png" alt="Logo Pokedex" width="150px"/>
+			</a>
+    </header>
+
 <main>
+    <div class="registrar">
     <form method="post" action="registrar.php" id="formulario-registro">
         <div class="label-input">
         <label>Nombre de usuario: </label>
@@ -71,6 +76,7 @@ mysqli_close($conexion);
         </div>
         <input type="submit" value="Enviar" class="btn-enviar">
     </form>
+    </div>
 </main>
 
 </body>

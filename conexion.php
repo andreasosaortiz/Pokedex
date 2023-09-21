@@ -1,9 +1,11 @@
 <?php
 
-$host = "localhost:3306";
+$host = "localhost:33067";
 $usuario = "root";
-$password = "505";
+$password = "";
+
 $nombre_bd = "pokedex"; 
+
 
 $conexion = new mysqli($host, $usuario,$password, $nombre_bd);
 

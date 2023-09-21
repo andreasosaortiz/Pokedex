@@ -31,7 +31,9 @@ if ($result->num_rows > 0) {
 <body>
     <header>
     <img class="logo" src="Pokemones/dex.png" alt="Logo">
-        <h1>Pokédex</h1>
+    <a href="/">
+				<img src="Pokemones/Pokédex_logo.png" alt="Logo Pokedex" width="150px"/>
+			</a>
     </header>
     <main>
         <div class="pokemon-card">
@@ -45,8 +47,11 @@ if ($result->num_rows > 0) {
                     include 'tipoPokemon.php';
                     $tipo_img = obtenerImagenTipoPokemon($tipo);
                     $tipo_id_2_img = obtenerImagenTipoPokemon($tipo_2);
-                    echo '<img class="tipo" src="' . $tipo_img . '" alt="' . $tipo . '">';
-                    echo '<img class="tipo" src="' . $tipo_id_2_img . '" alt="' . $tipo_2 . '">';
+                    $nombreTipo = obtenerNombreTipoPokemon($tipo);
+                    $nombreTipo2 = obtenerNombreTipoPokemon($tipo_2);
+                    echo "<img class='tipo' src='" . $tipo_img . "' alt='" . $tipo. "' title='" . $nombreTipo . "'>";
+                    echo "<img class='tipo' src='" . $tipo_id_2_img . "' alt='" . $tipo_2. "' title='" . $nombreTipo2 . "'>";
+
                     ?>
                 </p>
                 <p class="pokemon-description"><?php echo $descripcion; ?></p>

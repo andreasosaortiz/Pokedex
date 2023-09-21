@@ -19,6 +19,7 @@
     ?>
     </header>
     <main>
+        
         <h2>Buscar Pokémon</h2>
         <form id="search-form" method="POST" action="buscar.php">
             <input class="busquedap" type="text" id="search" name="search" placeholder="Nombre, Tipo o Número del Pokemon">

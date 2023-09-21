@@ -64,4 +64,70 @@ function obtenerImagenTipoPokemon($tipo) {
 
     return $tipo_img;
 }
+
+function obtenerNombreTipoPokemon($tipo) {
+    $tipo_nombre = '';
+
+    switch ($tipo) {
+        case '1':
+            $tipo_nombre = 'Acero';
+            break;
+        case '2':
+            $tipo_nombre= 'Agua';
+            break;
+        case '3':
+            $tipo_nombre = 'Bicho';
+            break;        
+        case '4':
+            $tipo_nombre= 'Dragon';
+            break;      
+        case '5':
+            $tipo_nombre = 'Electrico';
+            break;      
+        case '6':
+            $tipo_nombre = 'Fantasma';
+            break;      
+        case '7':
+            $tipo_nombre = 'Fuego';
+            break;      
+        case '8':
+            $tipo_nombre = 'Hada';
+            break; 
+        case '9':
+            $tipo_nombre = 'Hielo';
+            break;
+        case '10':
+            $tipo_nombre = 'Lucha';
+            break;
+        case '11':
+            $tipo_nombre = 'Normal';
+            break;        
+        case '12':
+            $tipo_nombre = 'Fantasma';
+            break;      
+        case '13':
+            $tipo_img = 'Psíquico';
+            break;      
+        case '14':
+            $tipo_nombre = 'Roca';
+            break;      
+        case '15':
+            $tipo_nombre = 'Siniestro';
+            break;      
+        case '16':
+            $tipo_nombre = 'Tierra';
+            break;
+        case '17':
+            $tipo_nombre = 'Veneno';
+            break;      
+        case '18':
+            $tipo_nombre = 'Volador';
+            break;                               
+        default:
+        $tipo_nombre = 'Pokebola';
+            break;
+    }
+
+    return $tipo_nombre;
+}
 ?>
