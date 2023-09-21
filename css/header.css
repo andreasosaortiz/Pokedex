@@ -16,8 +16,15 @@
 }
 
 #boton_login{
-    padding: 5px;
+    padding: 5px 15px;
     border: 1px solid black;
     background-color: #f2f2f2;
     border-radius: 5px;
+}
+
+#boton_login:hover{
+    cursor: pointer;
+   
+    
+
 }
