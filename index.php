@@ -34,7 +34,7 @@
                     <th>Nombre</th>
                     <th>Detalle</th>
                     <?php
-                    if(isset($_SESSION["logeado"]) && $_SESSION["logeado"]){
+                    if(isset($_SESSION["logeado"])){
                         echo "<th>Acciones</th>";
                     };
                     ?>
