@@ -65,6 +65,7 @@ mysqli_close($conexion);
 
 <main>
     <div class="registrar">
+        <img src="./Pokemones/gifpokemon3.gif" alt="">
     <form method="post" action="registrar.php" id="formulario-registro">
         <div class="label-input">
         <label>Nombre de usuario: </label>

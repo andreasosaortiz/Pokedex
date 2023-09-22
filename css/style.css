@@ -16,6 +16,7 @@ header {
     align-items: center;
 }
 
+
 .logo img{
     width: 150px;
 }
@@ -33,14 +34,9 @@ a {
 }
 
 h1 {
-    font-size: 36px; /* Aumentamos el tamaño del título a 36px */
+    font-size: 36px; 
     margin: 0;
     flex-grow: 1;
-}
-
-h2 {
-    font-size: 24px;
-    margin: 0.5rem, 0;
 }
 
 p {
@@ -63,6 +59,7 @@ button {
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
+
 }
 
 button:hover {
@@ -87,6 +84,31 @@ button:hover {
     border-radius: 5px;   
     padding: 5px; 
 }
+
+.titulo{
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.titulo img {
+  width: 50px; 
+  height: 50px; 
+  margin-right: 10px; 
+}
+
+.titulo h2 {
+  color: #000; 
+  margin: 0; 
+  padding: 10px; 
+}
+
+.titulo img {
+    width: 50px; 
+    height: 50px; 
+    margin-right: 10px;
+  }
 
 table {
     width: 90%;
@@ -143,7 +165,7 @@ tr:hover {
     color: white;
 }
 
-.pokemon-info {
+.buttoninfo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -165,6 +187,7 @@ tr:hover {
 .pokemon-details {
     flex: 2;
     text-align: left;
+    
 }
 
 .tipo{
@@ -209,13 +232,34 @@ tr:hover {
     background-color: #f5f5f5;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     max-width: 500px;
-    max-height: 800px;;
+    max-height: 800px;
 }
 
+#logout{
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#logout:hover {
+    background-color: #d32f2f;
+}
+
+
 .registrar{
-    
-   
-    margin: 0 auto;
+   display: inline-block;
+   text-align: center;
+   align-items: center;
+}
+
+.registrar img{
+margin: 10px;
+  width: 300px; 
+  height: 100px; 
+  
 }
 @media (max-width: 480px) {
     #formulario-registro {
@@ -229,9 +273,6 @@ tr:hover {
     margin-top: 50px;
 }
 
-.container{
-    margin-top: 5%;
-}
 
 .imagen{
     width: 100px;
@@ -250,5 +291,41 @@ label{
     border-color: #d32f2f;
 }
 
+.container{
+   
+    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+main{
+    width: 70%;
+    margin: 0 auto;
+}
+.modificar{
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+.modificarGif{
+    width: 90px; 
+  height: 90px; 
+  margin-left: 10px; 
+}
+.button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
 
+.button:hover {
+    background-color: #d32f2f;
+}
 

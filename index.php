@@ -19,8 +19,10 @@
     ?>
     </header>
     <main>
-        
+        <div class="titulo">
         <h2>Buscar Pokémon</h2>
+        <img src="./Pokemones/gifpokemon.gif" alt="Icono">
+        </div>
         <form id="search-form" method="POST" action="buscar.php">
             <input class="busquedap" type="text" id="search" name="search" placeholder="Nombre, Tipo o Número del Pokemon">
             <button type="submit">Buscar al Pokemon</button>

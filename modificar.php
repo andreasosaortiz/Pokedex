@@ -36,7 +36,10 @@ if (isset($_GET['id'])) {
     </header>
 <body>
     <main>
+        <div class="modificar">
 <h1 class="title">Modificar Pokémon</h1>
+
+</div>
     <div class="container">
     <img class="imagen" src="Pokemones/<?php echo "$imagen" ?>" alt="">
     <form method="post" action=<?php echo "actualizar.php?id=$id" ?>>

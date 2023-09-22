@@ -60,7 +60,7 @@ p {
     border-radius: 5px;
     margin: 20px;
     padding: 10px;
-    background-color: #f5f5f5;
+    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
