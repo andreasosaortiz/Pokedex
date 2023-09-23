@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
         echo "<td class='id'>" . $row["numero_identificador"] . "</td>";
         echo "<td class='nombre'>" . $row["nombre"] . "</td>";
         echo "<td class='detalle'><a class='description' href='infopokemon.php?id=" . $row["id"] . "'>Ver más</a></td>";
-        if (isset($_SESSION)){
+        if (isset($_SESSION["logeado"])){
             echo "<td class='actions'>
             <button class='modify'><a href='modificar.php?id=" . $row["id"] . "'>Modificar</a></button>
             <button class='delete'><a href='borrar.php?id=" . $row["id"] . "'>Borrar</a></button>

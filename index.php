@@ -19,8 +19,10 @@
     ?>
     </header>
     <main>
-        
+        <div class="titulo">
         <h2>Buscar Pokémon</h2>
+        <img src="./Pokemones/gifpokemon.gif" alt="Icono">
+        </div>
         <form id="search-form" method="POST" action="buscar.php">
             <input class="busquedap" type="text" id="search" name="search" placeholder="Nombre, Tipo o Número del Pokemon">
             <button type="submit">Buscar al Pokemon</button>
@@ -35,18 +37,24 @@
                     <th>Nombre</th>
                     <th>Detalle</th>
                     <?php
-                    if (isset($_SESSION)){
+                    if(isset($_SESSION["logeado"])){
                         echo "<th>Acciones</th>";
                     };
                     ?>
                 </tr>
             </thead>
             <tbody>
-                <?php include_once('datos.php'); ?>
+                <?php
+                include_once('datos.php');
+                ?>
             </tbody>
         </table>
     </main>
-
+    <?php
+    if(isset($_SESSION["logeado"])){
+        echo '<button ID="agregarPokemon" type="button"> <a href="crearPokemon.php"> Nuevo Pokemon</a> </button>';
+    }
+    ?>
 </body>
 
 
