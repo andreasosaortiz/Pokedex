@@ -52,7 +52,7 @@
     </main>
     <?php
     if(isset($_SESSION["logeado"])){
-        echo '<button type="button"> <a href="crearPokemon.php"> Nuevo Pokemon</a> </button>';
+        echo '<button ID="agregarPokemon" type="button"> <a href="crearPokemon.php"> Nuevo Pokemon</a> </button>';
     }
     ?>
 </body>

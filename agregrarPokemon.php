@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $idTipo = $row["id"];
             } else {
 
-                $idTipo = null;
+                $idTipo = "Null";
             }
             $sql = "SELECT id FROM tipos WHERE nombre = '$tipo2'";
             $resultTipo2 = $conexion->query($sql);
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $row2 = $resultTipo2->fetch_assoc();
                 $idTipo2 = $row2["id"];
             } else {
-                $idTipo2 = null;
+                    $idTipo2 = "Null";
             }
 
             $sql = "INSERT INTO pokemon (nombre, imagen, numero_identificador, descripcion, tipo_id, tipo_id_2) 

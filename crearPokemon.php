@@ -4,11 +4,11 @@ require_once ('conexion.php');
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Aagregar Pokémon</title>
+    <title>Agregar Pokémon</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<h1 class="title">Agragar  Pokémon</h1>
+<h1 class="title">Agregar  Pokémon</h1>
 <div class="container">
     <form action="agregrarPokemon.php" method="post" enctype="multipart/form-data">
         <label for="archivo">Selecciona una imagen:</label>
@@ -24,7 +24,7 @@ require_once ('conexion.php');
         <textarea class="input" id="descripcion" name="descripcion" rows="4" cols="50" placeholder=""></textarea><br><br>
 
         <label for="tipo">Selecciona un tipo:</label>
-        <select name="tipo" id="tipo">
+        <select name="tipo" id="tipo"><option value="">Selecciona un tipo</option>
         <?php
 
         $sql = "SELECT nombre FROM tipos";
@@ -41,6 +41,7 @@ require_once ('conexion.php');
 
         <label for="tipo">Selecciona un segundo tipo:</label>
         <select name="tipo2" id="tipo2">
+            <option value="">Selecciona un tipo</option>
             <?php
 
             $sql = "SELECT nombre FROM tipos";
