@@ -24,8 +24,13 @@
 
 #boton_login:hover{
     cursor: pointer;
-   
-    
 
 }
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+
 
