@@ -24,7 +24,7 @@
         <img src="./Pokemones/gifpokemon.gif" alt="Icono">
         </div>
         <form id="search-form" method="POST" action="buscar.php">
-            <input class="busquedap" type="text" id="search" name="search" placeholder="Nombre, Tipo o Número del Pokemon">
+            <input class="busquedap" type="text" id="search" name="search" placeholder="Nombre o Número del Pokemon">
             <button type="submit">Buscar al Pokemon</button>
         </form>
        
