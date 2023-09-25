@@ -344,3 +344,19 @@ main{
     background-color: #d32f2f;
 }
 
+/*mediaquerys tabla*/
+@media (max-width: 510px) {
+    main{
+        width: 100%;
+        margin: 0 auto;
+    }
+    table{
+        max-width: 100%;
+        border-collapse: collapse;
+        margin: 15px;
+        display: inline-block;
+    }
+    
+
+    }
+
