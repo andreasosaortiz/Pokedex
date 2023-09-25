@@ -6,12 +6,21 @@ if($_SERVER["REQUEST_METHOD"] = "POST"){
 $termino_busqueda = $_POST["search"];
 $termino_busqueda = $conexion->real_escape_string($termino_busqueda);
 
-$sql = "SELECT p.*, t.nombre AS nombre_tipo
-        FROM pokemon AS p
-        INNER JOIN tipos AS t ON p.tipo_id = t.id
-        WHERE p.nombre LIKE '%$termino_busqueda%'";
-
+    if (is_numeric($termino_busqueda)) {
+        $sql = "SELECT p.*, t.nombre AS nombre_tipo
+                FROM pokemon AS p
+                INNER JOIN tipos AS t ON p.tipo_id = t.id
+                WHERE p.numero_identificador = $termino_busqueda";
+    } else {
+        $sql = "SELECT p.*, t.nombre AS nombre_tipo
+                FROM pokemon AS p
+                INNER JOIN tipos AS t ON p.tipo_id = t.id
+                WHERE p.nombre LIKE '%$termino_busqueda%'";
+    }
 $resultado = $conexion->query($sql);
+
+
+
 }
 
 ?>
@@ -34,7 +43,7 @@ $resultado = $conexion->query($sql);
 <main>
         <h2>Buscar Pokémon</h2>
         <form id="search-form" method="POST" action="buscar.php">
-            <input class="busquedap" type="text" id="search" name="search" placeholder="Nombre, Tipo o Número del Pokemon">
+            <input class="busquedap" type="text" id="search" name="search" placeholder="Nombre o Número del Pokemon">
             <button type="submit">Buscar al Pokemon</button>
         </form>
 <table>
