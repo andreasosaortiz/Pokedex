@@ -17,7 +17,10 @@ if ($result->num_rows > 0) {
         echo "<td><img class='tipo' src='" . $tipo_id_img . "' alt='" . $row["tipo_id"] . "' title='" . $nombreTipo . "'><img class='tipo' src='" . $tipo_id_2_img . "' alt='" . $row["tipo_id_2"] . "' title='" . $nombreTipo2 . "'></td>";
         echo "<td class='id'>" . $row["numero_identificador"] . "</td>";
         echo "<td class='nombre'>" . $row["nombre"] . "</td>";
-        echo "<td class='detalle'><a class='description' href='infopokemon.php?id=" . $row["id"] . "'>Ver más</a></td>";
+
+       // echo "<td class='detalle'><a  class='description' href='infopokemon.php?id=" . $row["id"] . "'>Ver más</a></td>";
+
+       echo "<td class='detalle'><button  class='description' href='infopokemon.php?id=". $row["id"] . "'>Ver más</button> </td>";
         if (isset($_SESSION["logeado"])){
             echo "<td class='actions'>
             <button class='modify'><a href='modificar.php?id=" . $row["id"] . "'>Modificar</a></button>

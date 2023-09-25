@@ -53,6 +53,7 @@ p {
 }
 
 button {
+    margin-top: 5px;
     background-color: #f44336;
     color: white;
     border: none;
@@ -82,7 +83,8 @@ button:hover {
 }
 
 .description{
-    padding: 5px 10px;
+    margin: auto;
+    padding: 5px 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -356,7 +358,12 @@ main{
         margin: 15px;
         display: inline-block;
     }
-    
-
+    th, td {
+        padding: 0px;
+        text-align: left;
+        border: 1px solid #ddd;
     }
+
+
+}
 
